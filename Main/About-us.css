@@ -1,0 +1,208 @@
+body {
+    background-color: white;
+    font-family: Roboto, Arial;
+    padding-top: 30px;
+    
+  }
+  
+          .video-banner {
+              position: relative;
+              width: 100%;
+              overflow: hidden;
+              height: 300px; /* Adjust as needed */
+          }
+  
+          .video-banner video {
+              width: 100%;
+              height: auto;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+          }
+  
+  .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+  }
+  
+          .banner-text {
+              position: absolute;
+              top: 50%;
+              left: 10%; /* Adjust for text alignment */
+              transform: translateY(-50%);
+              color: white;
+              font-size: 3em; /* Large text size */
+              opacity: 0;
+              animation: fadeIn 2s ease forwards; /* Fade in animation */
+              z-index: 10; /* Ensure text is above the video */
+          }
+  
+  /* Once entering the website, the text will fade in, this will give good touch in the page */
+          @keyframes fadeIn {
+              to { opacity: 1; }
+          }
+          
+          
+                  body, html {
+              margin: 0;
+              padding: 0;
+              height: 100%;
+          }
+  
+          .animated-background {
+              width: 100%;
+              height: 100%;
+              background-image: url('https://seeklogo.com/images/M/medicine-symbol-logo-C5F32D7618-seeklogo.com.png');
+              background-repeat: repeat;
+              animation: backgroundMove 20s linear infinite;
+              position: relative;
+          }
+  
+          @keyframes backgroundMove {
+              from { background-position: 0 0; }
+              to { background-position: 100px 100px; }
+          }
+  
+  
+  @keyframes moveBackground {
+    0% { background-position: 0 0, 50px 50px; }
+    100% { background-position: 100px 100px, 150px 150px; } /* Adjust for desired movement */
+  }
+  
+  
+  div .banner-text
+  {
+    background-color: transparent;
+    font-family: Roboto;
+    
+  }
+  
+  div
+  {
+    background-color: white;
+  }
+  
+  #Studentss, #part2, #contact-us{
+  
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0px 5px 100px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+      background: rgba(255, 255, 255, 0.9); /* Black background with 70% opacity */
+  }
+  
+  .about-header, .blink , .part22, .part33{
+    text-align: center;
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    0% { color: #479DC4; }
+    50% {opacity: 0; color:black;}
+    100% { color: #479DC4; }
+  }
+  
+  /* contact form */
+  
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #contact-form input, #contact-form textarea, #contact-form button 
+  {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #contact-form button {
+    background-color: #479DC4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #contact-form button:hover {
+    background-color: #87C4B9;
+  }
+  
+  /* Navigation bar */
+  
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Black background with 70% opacity */
+    z-index: 1000;
+    padding: 10px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  
+  #navbar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  #navbar a:hover {
+    color: #469BC2;
+  }
+  
+  /* footer */
+  
+  #footer {
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 10px;
+    background: #479DC4;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    
+  }
+  
+  /* About us Animations */
+  
+  @keyframes horizontalMovement {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(100px); }
+  }
+  
+  @keyframes rainbowColor {
+      0% { color: #479DC4; }
+      14% { color: #87C4B9; }
+      28% { color: #479DC4; }
+      42% { color: #87C4B9; }
+      57% { color: #479DC4; }
+      71% { color: #87C4B9; }
+      85% { color: #479DC4; }
+      100% { color: #87C4B9; }
+  }
+  
+  .movements {
+      animation: horizontalMovement 2s ease-in-out infinite, rainbowColor 8s linear infinite;
+  }
+  
+  

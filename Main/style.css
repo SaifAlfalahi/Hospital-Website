@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*
+=========================
+body of the page
+=========================
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg'); /* Replace 'path/to/your/image.jpg' with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional - keeps the background fixed while scrolling */
+}
+
+.container {
+    /* background:white;  */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow:scroll;
+}
+
+* {
+    margin:0;
+    font-family: "Roboto", sans-serif;
+}
+
+.main {
+    flex: 1;
+    max-width: 70%;
+    border-radius: 12px;
+    background-color: #f7f8fa;
+    border: 1px solid #999;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+
+/*
+=========================
+head of the form
+=========================
+*/
+.form-header {
+    text-align: center;
+}
+
+.form-header h1 {
+    font-size: 28px;
+    color:#666;
+    text-transform: capitalize;
+}
+
+#logo {
+    width: 10%;
+    height: 10%;
+}
+
+
+/*
+=========================
+body of the form
+=========================
+*/
+.form-body {
+    background:f7f8fa;
+    padding:5px 10px;
+}
+
+.row {
+    display:flex;
+    flex-direction:row;
+}
+
+.shared {
+    flex:1;  
+    display:flex;
+    flex-direction:column; 
+    margin: 10px 5px;
+}
+
+label {
+    color:#1BBA93;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    display: inline;
+    width: fit-content;
+}
+
+input {
+    font-size: 18px;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #666;
+    border: 1px solid #d6d6d6;
+    border-radius: 7px;
+    background: white;
+    outline: none;
+}
+
+input[type="file"] {
+    border: none;
+    background-color: #f7f8fa;
+    opacity: 1;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.01);
+}
+
+select {
+    font-size: 18px;
+    height: 53px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #666;
+    border: 1px solid #d6d6d6;
+    border-radius: 7px;
+    outline: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .row{
+        flex-direction:column; 
+    }
+}
+
+
+
+/*
+=========================
+footer of the page
+=========================
+*/
+
+.image1 {
+    color: white;
+    width: 10vh;
+    margin-left: 3vh;
+  }
+  
+header {
+    padding-top: 6px;
+    padding-bottom: 10px;
+    width: 100vw;
+    height: 12vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 9999;
+    position: fixed;
+  }
+
+.Hcontainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .Hcontainer button {
+    margin-right: 10px !important;
+    width: 8vw;
+    height: 2.5em;
+    border-radius: 0.6em;
+    margin: 0;
+    text-align: center;
+    font-family: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 1em;
+    overflow: hidden;
+    align-items: center;
+    margin-left: auto;
+    background-color: rgba(0, 0, 0, 0.342);
+    color: rgb(255, 255, 255);
+  }
+
+  .button {
+    background-color: #3f93bd;
+    border: none;
+    color: white;
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    z-index: 99;
+  }
+  
+.button3 {
+    background-color: white;
+    color: black;
+    margin-left: 3vw;
+    margin-top: 2vh;
+  
+    border: 2px solid #3f93bd;
+  }
+  .button3:hover {
+    background-color: #3f93bd;
+    color: white;
+  }
+  
+.form-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2.5%;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 62px;
+    cursor: pointer;
+    background: linear-gradient(to right, red, red); /* Initial gradient */
+    transition: background 0.5s ease-in-out; /* Transition for background color change */
+    animation: slideAnimation 1s linear forwards; /* Animation for slide effect */
+}
+
+/* Hover effect to change button color to green */
+.btn:hover {
+    background: green;
+}
+
+/* Keyframes for slide animation */
+@keyframes slideAnimation {
+    from {
+        background-position: 0% 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+
+.polices {
+    position: relative;
+    display: block;
+    color: #777777;
+    z-index: 10;
+    margin-top: 37px;
+    text-align: justify;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.polices ::before {
+    content: "\n";
+}

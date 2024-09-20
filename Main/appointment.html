@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title> Book Appointment </title>
+		<meta charset="utf-8">
+
+		<style>
+	
+			.mainContainer{
+				display: grid;
+				place-items: center;
+				height: 100vh;
+			}
+
+			.contentContainer{
+				font-family: Arial, Helvetica, sans-serif;
+				display: grid;
+				place-items: center;
+				padding: 3em;
+				border-radius: 15px;
+				box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+				font-size: 1.3em;
+			}
+
+			#doctorBlock{
+				display: none;
+			}
+
+			#appointmentDateBlock{
+				display: none;
+			}
+
+			#appointmentTimeBlock{
+				display: none;
+			}
+
+			.buttonStyle{
+				background-color: rgb(31, 138, 204);
+				width: 5em;
+				padding: 5px;
+				font-size: 1.3em;
+				color: white;
+				border-color: rgb(31, 138, 204);
+				border-style: solid;
+				border-width: 3px;
+				border-radius: 10px;
+				transition : 400ms;
+			}
+			.buttonStyle:hover{
+				background-color: rgb(255, 255, 255);
+				transition : 400ms;
+				color: rgb(31, 138, 204);
+				cursor: pointer;
+			}
+
+			.required{
+				color:red;
+			}
+
+			.boxStyle{
+				border-color: rgb(31, 138, 204);
+				border-style: solid;
+				border-width: 3px;
+				border-radius: 10px;
+				height: 3vh;
+				width: 15vw;
+			}
+
+			.listStyle{
+				font-size: 1.1em;
+				background-color: #fff;
+				color: rgb(31, 138, 204);
+				border-color: rgb(31, 138, 204);
+				border-style: solid;
+				border-width: 3px;
+				border-radius: 10px;
+			}
+
+			img{
+				width: 5vw;
+				transition : 400ms;
+			}
+
+			img:hover{
+				width: 8vw;
+				transition : 400ms;
+				cursor: pointer;
+			}
+
+		</style>
+
+		<script type="text/javascript">
+
+			var departments = ["Neurology","Oncology","Cardiology", "Cancer care", "Pediatrics", "Ear, Nose And Throat (ENT)"];
+			var neurologyDoctors = ["neurologyDoctor1", "neurologyDoctor2", "neurologyDoctor3"];
+			var oncolgyDoctors = ["oncolgyDoctor1", "oncolgyDoctor2", "oncolgyDoctor3"];
+			var cardiologyDoctors = ["cardiologyDoctor1", "cardiologyDoctor2", "cardiologyDoctor3"];
+			var cancerCareDoctors = ["cancerCareDoctor1", "cancerCareDoctor2", "cancerCareDoctor3"];
+			var pediatricsDoctors = ["pediatricsDoctor1", "pediatricsDoctor2", "pediatricsDoctor3"];
+			var ENTDoctors = ["ENTDoctor1", "ENTDoctor2", "ENTDoctor3"];
+
+			window.onload = function() {
+				document.getElementById("departments").innerHTML= 
+					"<select id=\"departmentsList\"name=\"Department\" class=\"listStyle\" required>"+
+						"<option selected disabled>Choose Department</option>"+
+						"<option value=\"neurologyDoctors\">"+departments[0]+"</option>"+
+						"<option value=\"oncolgyDoctors\">"+departments[1]+"</option>"+
+						"<option value=\"cardiologyDoctors\">"+departments[2]+"</option>"+
+						"<option value=\"cancerCareDoctors\">"+departments[3]+"</option>"+
+						"<option value=\"pediatricsDoctors\">"+departments[4]+"</option>"+
+						"<option value=\"ENTDoctors\">"+departments[5]+"</option>"+
+					"</select>";
+
+				var departmentDoctors = "";
+				document.getElementById("departmentsList").addEventListener("change", 
+					function()
+						{
+							departmentDoctors = document.getElementById("departmentsList").value;
+
+							if(departmentDoctors == "neurologyDoctors")
+								departmentDoctors = neurologyDoctors
+							else if(departmentDoctors == "oncolgyDoctors")
+								departmentDoctors = oncolgyDoctors;
+							else if(departmentDoctors == "cardiologyDoctors")
+								departmentDoctors = cardiologyDoctors;
+							else if(departmentDoctors == "cancerCareDoctors")
+								departmentDoctors = cancerCareDoctors;
+							else if(departmentDoctors == "pediatricsDoctors")
+								departmentDoctors = pediatricsDoctors;
+							else if(departmentDoctors == "ENTDoctors")
+								departmentDoctors = ENTDoctors;
+
+							document.getElementById("doctors").innerHTML= 
+							"<select id=\"doctorsList\"name=\"doctors\" class=\"listStyle\" required>"+
+								"<option selected disabled>Choose Doctor</option>"+
+								"<option value=\"departmentDoctors[0]\">"+departmentDoctors[0]+"</option>"+
+								"<option value=\"departmentDoctors[0]\">"+departmentDoctors[1]+"</option>"+
+								"<option value=\"departmentDoctors[0]\">"+departmentDoctors[2]+"</option>"+
+							"</select>";
+
+							document.getElementById("doctorBlock").style.display = "block";
+							document.getElementById("appointmentDateBlock").style.display = "block";
+							document.getElementById("appointmentTimeBlock").style.display = "block";
+
+						}, false);
+			}
+
+		</script>
+		
+	</head>
+	
+	<body>
+		<div class="mainContainer">
+			<div class="contentContainer">
+				<a href="WebHome.html"><img src="logo.jpg" alt="logo"></a>
+				<h2>Book Appointment </h2>
+				<form name="survey" method="post">
+					<table cellpadding="15" cellspacing="5">
+						<thead>
+							<th ></th>
+							<th></th>
+						</thead>
+		
+						<tbody>
+							
+							<tr>
+								<td>
+									<label> First Name<span class="required">*</span>
+										<br/>
+										<input name="FirstName" class="boxStyle" type="text" size="50" placeholder="Enter your first name" autofocus required>
+									</label>
+								</td>
+		
+								<td>
+									<label> Last Name<span class="required">*</span>
+										<br/>
+										<input name="LastName" class="boxStyle" placeholder="Enter your last name" type="text" size="50">
+									</label>
+								</td>
+		
+							</tr>
+		
+							<tr>
+								<td>
+									<label> Email<span class="required">*</span>
+										<br/>
+										<input name="Email" class="boxStyle" type="Email" placeholder="email@domain.com" size="50" required>
+									</label>
+									
+								</td>
+		
+								<td>
+									<label> Phone Number<span class="required">*</span>
+										<br/>
+										<input name="PhoneNumber" class="boxStyle" type="text" size="50" placeholder="+971 5# ### ###" required>
+									</label>
+									
+								</td>
+		
+							</tr>
+		
+							<tr>
+								<td>
+									<label> Gender<span class="required">*</span>
+										<br/>
+										<select name="Gender" class="listStyle" required>
+											<option selected disabled>Choose gender</option>
+											<option>Male</option>
+											<option>Female</option>
+										</select>
+									</label>
+								</td>
+		
+								<td>
+									<label> Date of birth<span class="required">*</span>
+										<br/>
+										<input name="DOB" type="date" size="50" class="boxStyle" required>
+									</label>
+								</td>
+		
+							</tr>
+		
+							<tr>
+								<td>
+									<label> Department<span class="required">*</span>
+										<br/>
+										<div id="departments"></div>
+									</label>
+								</td>
+		
+								<td id="doctorBlock">
+									<label> Doctor<span class="required">*</span>
+										<br/>
+										<div id="doctors"></div>
+										<div id="option"></div>
+									</label>
+								</td>
+		
+							</tr>
+							
+							<tr>
+								<td>
+									<div id="appointmentDateBlock">
+										<label> Appointment date<span class="required">*</span>
+											<br/>
+											<input name="appointmentDate" type="datetime-local" size="50" class="boxStyle" required>
+										</label>
+									</div>						
+								</td>
+			
+									<td>
+										<div id="appointmentTimeBlock">
+											<label> Appointment time<span class="required">*</span>
+												<br/>
+												<select name="appointmentTime" class="listStyle" required>
+													<option selected disabled>Choose appointment time</option>
+													<option>8:00-9:00</option>
+													<option>9:00-10:00</option>
+													<option>11:00-12:00</option>
+													<option>14:00-15:00</option>
+													<option>15:00-16:00</option>
+													<option>16:00-17:00</option>
+												</select>
+											</label>
+										</div>
+									</td>
+			
+							</tr>
+		
+							<tr>
+								<td align="right">
+									<input type="submit" value="Submit" class="buttonStyle">
+								</td>
+		
+								<td>
+									<input type="reset" value="Clear" class="buttonStyle">
+								</td>
+							</tr>
+		
+						</tbody>
+					</table>
+		
+				</form>
+			</div>
+	
+			<!--
+	
+				<tr>
+							<td>
+								<label>
+									What type of internet connection do you have?
+									<br/> (Select One)
+								</label>
+							</td>
+							
+							<td>
+								<select>
+									<option> Dial-up </option>
+									<option> DSL </option>
+									<option> High Speed Cable </option>
+									<option> Other </option>
+								</select>
+							</td>
+						</tr>
+	
+						<tr>
+							<td>
+								<label> What type of computer do you use most at home?</label>
+							</td>
+	
+							<td>
+								<label>
+									<input name="radioButtons1" type="radio">
+									Desktop</label>
+	
+								<label>
+									<input name="radioButtons1" type="radio">
+									Laptop</label>
+							</td>
+						</tr>
+	
+						<tr>
+							<td>
+								<label> How would you describe your main reason for using the internet </label>
+							</td>
+	
+							<td>
+								<label>
+									<input name="radioButtons2" type="radio">
+									 To do work-related activities </label>
+								<br/>
+	
+								<label> 
+									<input name="radioButtons2" type="radio">
+									To do school-related activities </label>
+								<br/>
+	
+								<label>
+									<input name="radioButtons2" type="radio">
+									 For entertainment purposes </label>
+								<br/>
+	
+								<label>
+									<input name="radioButtons2" type="radio">
+									 Other activities </label>
+								<br/>
+							</td>
+	
+						</tr>
+	
+						<tr>
+							<td>
+								<fieldset>
+									<legend> Types of sites visited </legend>
+									<p>
+										What types of web sites do you access most often?
+										<br/> Check all that apply.
+									</p>
+	
+									<input name="checkBoxes1" type="checkbox">
+									<label> Self improvement </label>
+									<br/>
+	
+									<input name="checkBoxes1" type="checkbox">
+									<label> Entertainment </label>
+									<br/>
+	
+									<input name="checkBoxes1" type="checkbox">
+									<label> News and Sports </label>
+									<br/>
+	
+									<input name="checkBoxes1" type="checkbox">
+									<label> Reference </label>
+									<br/>
+	
+									<input name="checkBoxes1" type="checkbox">
+									<label> Email </label>
+									<br/>
+	
+								</fieldset>
+	
+							</td>
+								
+							<td>
+								<fieldset>
+									<legend> Time spent using internet </legend>
+									<p>
+										What types of web sites do you access most often?
+										<br/> Check all that apply.
+									</p>
+	
+									<input name="radioButtons3" type="radio">
+									<label> 0-3 Hours </label>
+									<br/>
+	
+									<input name="radioButtons3" type="radio">
+									<label> 4-6 Hours </label>
+									<br/>
+	
+									<input name="radioButtons3" type="radio">
+									<label> 7-10 Hours </label>
+									<br/>
+	
+									<input name="radioButtons3" type="radio">
+									<label> 11-14 Hours </label>
+									<br/>
+	
+									<input name="radioButtons3" type="radio">
+									<label> 15+ Hours </label>
+									<br/>
+	
+								</fieldset>
+							</td>
+	
+						</tr>
+	
+						<tr>
+							<td colspan="2">
+								<label>Please comment on your opinions concerning Internet privacy and safety.</label>
+								<textarea rows="5" cols="100"></textarea>
+		
+							</td>
+						</tr>
+			-->
+		</div>
+	</body>
+
+</html>

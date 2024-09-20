@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #c2e8ff; /* Blue background */
+}
+
+.container {
+    position: fixed;
+    background-color: #ffffff; /* White content background */
+    color: #000; /* Black text */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30vw;
+    text-align: center;
+    z-index: 1;
+}
+
+.floatingText{
+    position: fixed;
+    top: 0px;
+    font-size: 4em;
+    font-weight: bold;
+    color: #81bfe6;
+    z-index: 0;
+    animation-name: textTransition;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.floatingText2{
+    position: fixed;
+    top: 0px;
+    font-size: 4em;
+    font-weight: bold;
+    color: #81bfe6;
+    z-index: 0;
+    animation-name: textTransition;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.floatingText3{
+    position: fixed;
+    top: 0px;
+    font-size: 4em;
+    font-weight: bold;
+    color: #81bfe6;
+    z-index: 0;
+    animation-name: textTransition;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes textTransition {
+    0% {transform: translateX(700px);}
+    100% {transform: translateX(-700px);}
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+}
+
+span.required {
+    color: #ff0000; /* Red asterisk color */
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.buttonStyle{
+    background-color: rgb(31, 138, 204);
+    padding: 5px;
+    font-size: 1.3em;
+    color: white;
+    border-color: rgb(31, 138, 204);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    transition : 400ms;
+}
+.buttonStyle:hover{
+    background-color: rgb(255, 255, 255);
+    transition : 400ms;
+    color: rgb(31, 138, 204);
+}

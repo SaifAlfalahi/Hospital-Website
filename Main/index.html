@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>be a Doctor</title>
+    <meta charset="UTF-8" lang="English">
+    <meta name="description" content="a website to hire doctors">
+    <link rel="stylesheet" href="style.css">
+    <script src="script1.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="Hcontainer">
+            <img src="logo.jpg" class="image1">
+
+            <div>
+                <a href="WebHome.html"><button class="button button3">Home</button></a>
+              <a href="departments.html"><button class="button button3">Departments</button></a>
+              <a href="About-us.html"><button class="button button3">About us</button></a>
+              <a href="appointment.html"><button class="button button3">Appointment</button></a>
+      
+            </div>
+      
+          </div>
+    </header>
+    <section class="container">
+        <form class="main" action="home" autocomplete="on">
+            <!-- form header -->
+            <div class="form-header">
+                <img id="logo" src="logo.jpg" alt="Logo">
+                <h1>register now</h1>
+            </div>
+
+            <!-- form body -->
+            <div class="form-body">
+                <!-- Firstname and Lastname -->
+                <div class="row">
+                    <div class="shared left">
+                        <label for="firstname" class="label-title">first name <sup
+                                style="color: red; font-size: medium;">*</sup></label>
+                        <input type="text" id="firstname" class="form-input" placeholder="Enter Your First Name"
+                            required>
+                    </div>
+
+                    <div class="shared right">
+                        <label for="lastname" class="label-title">last name <sup
+                                style="color: red; font-size: medium;">*</sup></label>
+                        <input type="text" id="lastname" class="form-input" placeholder="Enter Your last Name" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="shared left">
+                        <label for="date" class="label-title">date of birth <sup
+                                style="color: red; font-size: medium;">*</sup></label>
+                        <input type="date" id="date" class="form-input" required>
+                    </div>
+
+                    <div class="shared right">
+                        <label for="email" class="label-title">email address <sup
+                                style="color: red; font-size: medium;">*</sup></label>
+                        <input type="email" id="email" class="form-input" placeholder="Enter Your Email Address"
+                            required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="shared left">
+                        <label class="label-title">gender <sup style="color: red; font-size: medium;">*</sup></label>
+                        <select name="gender" class="form-input" required>
+                            <option selected disabled hidden>Choose Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="shared right">
+                        <label for="phone" class="label-title">phone <sup
+                                style="color: red; font-size: medium;">*</sup></label>
+                        <input type="tel" id="phone" class="form-input" placeholder="Enter Your Phone Number" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="shared left">
+                        <label class="label-title">specialization <sup
+                                style="color: red; font-size: medium;">*</sup></label>
+                        <select name="specialization" class="form-input" required>
+                            <option selected disabled hidden>Choose Specialization</option>
+                            <option value="Internal Medicine and Gastroenterology">
+                                Internal Medicine and Gastroenterology
+                            </option>
+                            <option value="Cardiology">
+                                Cardiology
+                            </option>
+                            <option value="Gynecology, Urogynecology and Onco gynecology">
+                                Gynecology, Urogynecology and Onco gynecology
+                            </option>
+                            <option value="Neurology">
+                                Neurology
+                            </option>
+                            <option value="Urology,  Pediatric urology and Andrology">
+                                Urology, Pediatric urology and Andrology
+                            </option>
+                            <option value="Arthroscopy, Shoulder-, Knee Surgery and Sports Injuries">
+                                Arthroscopy, Shoulder-, Knee Surgery and Sports Injuries
+                            </option>
+                            <option value="Vascular Surgery">
+                                Vascular Surgery
+                            </option>
+                            <option value="Spine Surgery">
+                                Spine Surgery
+                            </option>
+                            <option value="Hand, Elbow and Microsurgeon">
+                                Hand, Elbow and Microsurgeon
+                            </option>
+                            <option value="Thoracic surgery">
+                                Thoracic surgery
+                            </option>
+                            <option value="Neurosurgery: brain-, skull base-, spine, and pediatric neurosurgery">
+                                Neurosurgery: brain-, skull base-, spine, and pediatric neurosurgery
+                            </option>
+                            <option value="Cardiac device surgery and Rhythmology">
+                                Cardiac device surgery and Rhythmology
+                            </option>
+                            <option value="Foot and Ankle Surgery">
+                                Foot and Ankle Surgery
+                            </option>
+                            <option value="Pediatric surgery and pediatric urology">
+                                Pediatric surgery and pediatric urology
+                            </option>
+                            <option value="General, Visceral and Oncologic Surgery">
+                                General, Visceral and Oncologic Surgery
+                            </option>
+                            <option value="Orthodontics">
+                                Orthodontics
+                            </option>
+                            <option value="Otorhinolaryngology and Skull Base Surgery">
+                                Otorhinolaryngology and Skull Base Surgery
+                            </option>
+                            <option value="Arthroplasty, Total Joint Replacement">
+                                Arthroplasty, Total Joint Replacement
+                            </option>
+                            <option value="Radiation Oncology">
+                                Radiation Oncology
+                            </option>
+                            <option value="Diagnostic and Interventional Radiology and Neuroradiology">
+                                Diagnostic and Interventional Radiology and Neuroradiology
+                            </option>
+                            <option value="Ophthalmology">
+                                Ophthalmology
+                            </option>
+                            <option value="Plastic, Aesthetic and Reconstructive Surgery">
+                                Plastic, Aesthetic and Reconstructive Surgery
+                            </option>
+                            <option value="Adult cardiac surgery">
+                                Adult cardiac surgery
+                            </option>
+                            <option value="Pediatrics and Neonatology">
+                                Pediatrics and Neonatology
+                            </option>
+                            <option value="Child and adolescent psychiatry">
+                                Child and adolescent psychiatry
+                            </option>
+                            <option value="Hematology and Oncology">
+                                Hematology and Oncology
+                            </option>
+                            <option value="Dermatology and venereology">
+                                Dermatology and venereology
+                            </option>
+                            <option value="Adult Psychiatry and Addiction Treatment">
+                                Adult Psychiatry and Addiction Treatment
+                            </option>
+                            <option value="Neurorehabilitation">
+                                Neurorehabilitation
+                            </option>
+                            <option value="Rheumatology">
+                                Rheumatology
+                            </option>
+                            <option value="Nephrology">
+                                Nephrology
+                            </option>
+                            <option value="Pediatric Orthopedics">
+                                Pediatric Orthopedics
+                            </option>
+                            <option value="Pulmonology">
+                                Pulmonology
+                            </option>
+                            <option value="Pediatric Cardiology">
+                                Pediatric Cardiology
+                            </option>
+                            <option value="Phlebology">
+                                Phlebology
+                            </option>
+                            <option value="Oncoplastic Breast Surgery">
+                                Oncoplastic Breast Surgery
+                            </option>
+                            <option value="psychological Counseling and coaching">
+                                psychological Counseling and coaching
+                            </option>
+                            <option value="Clinical Nutrition, Dietetics and Lifestyle.">
+                                Clinical Nutrition, Dietetics and Lifestyle.
+                            </option>
+                            <option value="Pediatric cardiac surgery">
+                                Pediatric cardiac surgery
+                            </option>
+                            <option value="Pediatric neurology">
+                                Pediatric neurology
+                            </option>
+                            <option value="Reproductive endocrinology and infertility">
+                                Reproductive endocrinology and infertility
+                            </option>
+                            <option value="Pediatric Endocrinology, Diabetology and Nutrition">
+                                Pediatric Endocrinology, Diabetology and Nutrition
+                            </option>
+                            <option value="Geriatric medicine">
+                                Geriatric medicine
+                            </option>
+                            <option value="Rare Diseases">
+                                Rare Diseases
+                            </option>
+                            <option value="Sexual Diseases and Sexual Therapy">
+                                Sexual Diseases and Sexual Therapy
+                            </option>
+                            <option value="Medical genetics and immunological diseases">
+                                Medical genetics and immunological diseases
+                            </option>
+                            <option value="Infectious diseases and travel medicine">
+                                Infectious diseases and travel medicine
+                            </option>
+                            <option value="Adult Endocrinology, Diabetes and Metabolic Disorders">
+                                Adult Endocrinology, Diabetes and Metabolic Disorders
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="shared right">
+                        <label for="number" class="label-title">experience years <sup
+                                style="color: red; font-size: medium;">*</sup></label>
+                        <input type="number" id="number" class="form-input" placeholder="Enter Your Experience Years"
+                            required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="shared left">
+                        <label class="label-title">degree <sup style="color: red; font-size: medium;">*</sup></label>
+                        <select name="degree shared" required>
+                            <option selected disabled hidden>Choose Your Degree</option>
+                            <option value="Prof. Dr">Prof. Dr</option>
+                            <option value="Assistant Prof. Dr">Assistant Prof. Dr</option>
+                            <option value="Head of Department">Head of Department</option>
+                            <option value="Consultant">Consultant</option>
+                            <option value="Specialist">Specialist</option>
+                        </select>
+                    </div>
+
+                    <div class="shared right linear">
+                        <label for="cv" class="label-title">attach your CV <sup
+                                style="color: red; font-size: medium;">*</sup></label>
+                        <input type="file" id="cv" class="form-input" name="files" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="shared left linear">
+                        <label for="certificates" class="label-title">Upload Up to 10 certificates <sup
+                                style="color: red; font-size: medium;">*</sup></label>
+                        <input type="file" id="certificates" class="form-input" name="certificates[]" multiple required>
+                    </div>
+
+                    <div class="shared right linear">
+                        <label for="profileImage" class="label-title">Upload Your Profile Image <sup
+                                style="color: red; font-size: medium;">*</sup></label>
+                        <input type="file" id="profileImage" class="form-input" name="image_id" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- form footer -->
+            <div class="form-footer">
+                <button type="submit" class="btn">Create</button>
+                <p class="polices">
+                    To create your account, weCare UG will process the above data. This data will be stored for 10 years
+                    after your account is last active and will be only accessible by authorized staff of weCare UG. You
+                    have rights of access, rectification, erasure, restriction, objection and data portability of your
+                    personal data and to withdraw your consent at any time. You can view your data once logged into our
+                    website and update or correct information or you can write to our Data Protection Officer at
+                    info@weCare.com You also have the right to lodge a complaint with the data protection authority.
+                    weCare UG take protecting your personal data seriously and we never reuse, rent or sell your
+                    personal data. Please see our Privacy Policy for full details of our comprehensive data policies.
+                </p>
+            </div>
+        </form>
+    </section>
+</body>

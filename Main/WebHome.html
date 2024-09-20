@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Home</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link rel="stylesheet" href="HospitalStyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="Hcontainer">
+      <img src="logo.jpg" class="image1">
+      <div>
+        <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/saif-al-falahi-b8a084244/" target="_blank" class="fa fa-linkedin"></a>
+        <a href="https://www.youtube.com/watch?v=tZeR1AGk_Uk&t=19s" target="_blank" class="fa fa-youtube"></a>
+
+      </div>
+      <div>
+        <a href="departments.html"><button class="button button3">Departments</button></a>
+        <a href="index.html"><button class="button button3">Hiring</button></a>
+        <a href="About-us.html"><button class="button button3">About us</button></a>
+        <a href="appointment.html"><button class="button button3">Appointment</button></a>
+        <a href="pharmacy.html"><button class="button button3">Pharmacy</button></a>
+
+
+      </div>
+
+    </div>
+  </header>
+  <div class="containAll">
+    <div id="slideShow">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="Background1.jpg" style="width:100vw">
+        </div>
+        <div class="mySlides fade">
+          <img src="Background2.jpg" style="width:100vw">
+        </div>
+        <div class="mySlides fade">
+          <img src="Background3.jpg" style="width:100vw">
+        </div>
+        <div class="mySlides fade">
+          
+          <video style="width:100vw" muted autoplay loop>
+            <source src="Background0_resized.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+
+      </div>
+    </div>
+
+
+    <div id="formId">
+      <div id="smallerForm">
+        <div class="tabs">
+          <div class="panel">
+
+            <table class="formTable">
+              <thead><h2 class="headingTitle" style="margin-bottom: 0px;">Request an appointment</h2></thead>
+              <tr>
+                <td>
+                  <button type="button" onclick="myFunction('specialityDropdown')" class="dropbtn">Speciality</button>
+                  <div id="specialityDropdown" class="dropdown-content">
+                    <input type="text" placeholder="Search.." id="myInput"
+                      onkeyup="filterFunction('specialityDropdown')">
+                    <a href="#about" onclick="selectItem('specialityDropdown', this)">Neurology</a>
+                    <a href="#base" onclick="selectItem('specialityDropdown', this)">Oncology</a>
+                    <a href="#blog" onclick="selectItem('specialityDropdown', this)">Cardiology</a>
+                    <a href="#contact" onclick="selectItem('specialityDropdown', this)">Cancer Care</a>
+                    <a href="#custom" onclick="selectItem('specialityDropdown', this)">Pediatrics</a>
+                    <a href="#support" onclick="selectItem('specialityDropdown', this)">ENT</a>
+                  </div>
+          </div>
+          </td>
+          <td>
+            <div class="dropdown">
+              <button type="button" onclick="myFunction('branchDropdown')" class="dropbtn">Branch</button>
+              <div id="branchDropdown" class="dropdown-content">
+                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction('branchDropdown')">
+                <a href="#about" onclick="selectItem('branchDropdown', this)">USA, NewYork</a>
+                <a href="#base" onclick="selectItem('branchDropdown', this)">UAE, Dubai</a>
+                <a href="#blog" onclick="selectItem('branchDropdown', this)">France, Paris</a>
+                <a href="#contact" onclick="selectItem('branchDropdown', this)">UK, London</a>
+                <a href="#custom" onclick="selectItem('branchDropdown', this)">Japan, Tokyo</a>
+                <a href="#support" onclick="selectItem('branchDropdown', this)">South Korea, Seoul</a>
+                <a href="#tools" onclick="selectItem('branchDropdown', this)">Turkey, Istanbul</a>
+              </div>
+            </div>
+
+          </td>
+          <td>
+            <div class="dropdown">
+              <button type="button" onclick="myFunction('doctorDropdown')" class="dropbtn">Doctor</button>
+              <div id="doctorDropdown" class="dropdown-content">
+                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction('doctorDropdown')">
+                <a href="#about" onclick="selectItem('doctorDropdown', this)">Dr. Emily Torres</a>
+                <a href="#base" onclick="selectItem('doctorDropdown', this)">Dr. Arjun Patel</a>
+                <a href="#blog" onclick="selectItem('doctorDropdown', this)">Dr. Lucas Smith</a>
+                <a href="#contact" onclick="selectItem('doctorDropdown', this)">Dr. Michael Chen</a>
+                <a href="#custom" onclick="selectItem('doctorDropdown', this)">Dr. Robert Garcia</a>
+                <a href="#support" onclick="selectItem('doctorDropdown', this)">Dr. Kevin O'Reilly</a>
+              </div>
+            </div>
+          </td>
+
+          </tr>
+
+          <tr>
+            <td>
+              <input class="type-1" type="text" placeholder="Your Name...">
+            </td>
+            <td>
+              <input class="type-1" type="email" placeholder="Your Email...">
+
+            </td>
+            <td>
+              <input class="type-1" type="tel" placeholder="Your Mobile...">
+            </td>
+
+          </tr>
+
+          <tr>
+            <td style="text-align: start;">
+              <p class="labelingGender">Your gender</p>
+              <input type="radio" name="gender" value="male"> Male
+              <input type="radio" name="gender" value="female"> Female
+            <td style="text-align: start;">
+              <p class="labelingDate">Prefered Appointment date...</p>
+              <input type="datetime-local" class="type-2">
+
+            </td>
+            <td rowspan="2">
+              <textarea cols="30" rows="10" class="type-2" placeholder="Enquiry details..."></textarea>
+            </td>
+
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button type="submit" id="submitBtn"> Submit </button>
+            </td>
+          </tr>
+          </table>
+
+
+
+
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+
+  </div>
+
+  <div id="e1">
+    <h2 class="headingTitle">Our Promise For A New Kind Of Caring</h2>
+    <div class="titleUnderline ">
+
+    </div>
+
+    <div id="picTable">
+      <table>
+        <tr>
+          <td>
+            <div class="frame">
+              <img src="Multispeciality.jpg" alt="Multispeciality" width="300vh">
+              <h2 class="headingTitle2">Complex Multispeciality <br> Hospital</h2>
+              <div class="titleUnderline2 ">
+
+              </div>
+              <br><a href="https://www.adhikarilifeline.com/multispeciality-hospitals-more-beneficial-than-general-hospitals/#:~:text=Multispeciality%20hospitals%20are%20hospitals%20that,are%20specialists%20in%20their%20field." target="_blank"><button class="button button1">Read more</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="frame">
+              <img src="Innovation.jpg" alt="Multispeciality" width="300vh">
+              <h2 class="headingTitle2">Innovative Medical<br> Research</h2>
+              <div class="titleUnderline2 ">
+
+              </div>
+              <br><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4117143/" target="_blank"><button class="button button1">Read more</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="frame">
+              <img src="Robots.jpg" alt="Multispeciality" width="300vh">
+              <h2 class="headingTitle2">Modern Robotic <br> Technologies</h2>
+              <div class="titleUnderline2 ">
+
+              </div>
+              <br><a href="https://www.sciencedirect.com/science/article/pii/S0168851022000562" target="_blank"><button class="button button1">Read more</button></a href="https://www.sciencedirect.com/science/article/pii/S0168851022000562" target="_blank">
+            </div>
+          </td>
+          <td>
+            <div class="frame">
+              <img src="Destination.jpg" alt="Multispeciality" width="300vh">
+              <h2 class="headingTitle2">Global Healthcare <br> Destination</h2>
+              <div class="titleUnderline2 ">
+
+              </div>
+              <br><a href="https://researchkonnection.com/dubai-focuses-on-becoming-a-global-healthcare-destination/" target="_blank"><button class="button button1">Read more</button></a>
+            </div>
+          </td>
+
+        </tr>
+      </table>
+
+    </div>
+  </div>
+
+  <div id="e2">
+
+  </div>
+
+  <div id="e3">
+    <br> <br>
+    <h2 class="headingTitle">Latest Offers & News!</h2>
+    <div class="titleUnderline ">
+    </div>
+
+    <div id="newsTable">
+      <table>
+        <tr>
+          <td rowspan="2" colspan="2">
+            <div class="frame1">
+              <div id='show_bg_1'>
+                <h2>Now supporting "NewYork Life" Health Insurance!!!</h2> <br><b>The New York Life insurance company is
+                  the third-largest insurance brand in the financial states focusing on life insurance. Launched in
+                  1845.</b>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><a href="https://www.newyorklife.com/" target="_blank"><button class="button button1">Read more</button></a>
+              </div>
+            </div>
+          </td>
+
+          <td>
+            <div class="frame2">
+              <div id='show_bg_2'>
+                <h3>Robotic Surgeries Soon! </h3> <b>Starting next January. We will provide our surgeons with the newest
+                  technologies to achieve highest surgeries success rates.</b>
+                <br><br><a href="https://www.mayoclinic.org/tests-procedures/robotic-surgery/about/pac-20394974" target="_blank"><button class="button button1">Read more</button></a>
+              </div>
+            </div>
+
+          </td>
+
+          <td>
+            <div class="frame2">
+              <div id='show_bg_3'>
+                <h3>30% OFF!!! </h3> <b>Only for ENBD users and for a limited time. 30% discount on all services </b>
+                <br><br><br><a href="https://www.emiratesnbd.com/en" target="_blank"><button class="button button1">Read more</button></a>
+              </div>
+            </div>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="frame2">
+              <div id='show_bg_4'>
+                <h3>Announcing Neuorology Department </h3> <b>Neurology is now a part of out hospital's concerns! </b>
+                <br><br><br><a href="https://www.urmc.rochester.edu/highland/departments-centers/neurology/what-is-a-neurologist.aspx#:~:text=Introduction%20to%20Neurology,the%20brain%20and%20spinal%20cord" target="_blank"><button class="button button1">Read more</button></a>
+              </div>
+            </div>
+
+          </td>
+
+          <td>
+            <div class="frame2">
+              <div id='show_bg_5'>
+                <h3>Announcing Our New Branch Seoul! </h3> <b>Our hospital is now functioning in South Korea, Seoul </b>
+                <br><br><br><a href="https://medical.visitseoul.net/en/index" target="_blank"><button class="button button1">Read more</button></a>
+              </div>
+
+
+            </div>
+
+          </td>
+
+        </tr>
+        
+
+      </table>
+      <a href="https://www.nytimes.com/topic/subject/hospitals" target="_blank"><button class="button button2">Read more</button></a>
+    </div>
+   
+  </div>
+  
+  <div id="e4">
+    <div>
+      <a onclick="plusSlides(-1)" class="LR"><img src="left.png" alt="left" width="30px"></a>
+    </div>
+    <div>
+      <a onclick="plusSlides(1)" class="LR"><img src="right.png" alt="right" width="30px"></a>
+    </div>
+
+
+  </div>
+
+  <div id="e5">
+    <img src="logo.jpg" width="200vw" height="200vh" style="justify-self: start; opacity: 0.4;">
+
+    <h1 class="headingTitle3" style="color: white; font-size: 3em;">World Health Organization <div class="titleUnderline"
+        style="margin-top: 1em;">
+      </div>
+    </h1>
+    <p style="color: white; align-self: center; font-size: 2em;">Hospitals are reservoirs of critical resources and knowledge. They can be classified according to the
+      interventions they provide, the roles they play in the health system and the health and educational services they
+      offer to the communities in and around them. <br><a href="https://www.who.int/health-topics/hospitals#tab=tab_3" target="_blank">Source</a></p>
+      
+
+  </div>
+
+
+
+  <footer class="footer">
+    <div class="footer__addr">
+      <h1 class="footer__logo"> <img src="logo.jpg" width="100vw" height="100vh" style="justify-self: start;"></h1>
+
+      <h2>Contact</h2>
+
+      <address>
+        5534 Sharjah UOS. UAE Fall 2023<br>
+
+        <a class="footer__btn" href="mailto:U20200974@sharjah.ac.ae" target="_blank">Email Us</a>
+      </address>
+    </div>
+
+    <ul class="footer__nav">
+      <li class="nav__item">
+        <h2 class="nav__title">Media</h2>
+
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Online</a>
+          </li>
+
+          <li>
+            <a href="#">Print</a>
+          </li>
+
+          <li>
+            <a href="#">Medicine</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav__item nav__item--extra">
+        <h2 class="nav__title">Modern Technologies in medicine</h2>
+
+        <ul class="nav__ul nav__ul--extra">
+
+          <li>
+            <a
+              href="https://mohap.gov.ae/en/media-center/news/1/2/2023/mohap-launches-3d-digital-metaverse-assessment-service-for-health-professionals-and-innovative" target="_blank">Digital
+              Health Assessment</a>
+          </li>
+
+          <li>
+            <a
+              href="https://blog.engineering.vanderbilt.edu/the-future-of-surgery-augmentation-and-automation-in-healthcare" target="_blank">Surgery
+              Automation</a>
+          </li>
+
+          <li>
+            <a href="https://www.sciencedirect.com/journal/artificial-intelligence-in-medicine" target="_blank">Artificial Intelligence
+              in Medicine</a>
+          </li>
+
+          <li>
+            <a href="https://ordr.net/article/iot-healthcare-examples/" target="_blank">IoT in Medicine</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav__item">
+        <h2 class="nav__title">Legal</h2>
+
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#">Terms of Use</a>
+          </li>
+
+          <li>
+            <a href="#">Sitemap</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="legal">
+      <p>&copy; 2023 Web-programming. All rights reserved.</p>
+
+      <div class="legal__links">
+        <span>Made by <span class="heart">♥</span> Saif Al-falahi, supervised by Dr. Isam</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+
+
+
+
+    function myFunction(dropdownId) {
+      var dropdown = document.getElementById(dropdownId);
+      dropdown.classList.toggle("show");
+    }
+
+    function filterFunction(dropdownId) {
+      var input, filter, ul, li, a, i;
+      input = document.getElementById(dropdownId).getElementsByTagName("input")[0];
+      filter = input.value.toUpperCase();
+      div = document.getElementById(dropdownId);
+      a = div.getElementsByTagName("a");
+      for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          a[i].style.display = "";
+        } else {
+          a[i].style.display = "none";
+        }
+      }
+    }
+
+    function selectItem(dropdownId, item) {
+      var buttonText = item.textContent || item.innerText;
+      document.getElementById(dropdownId).previousElementSibling.textContent = buttonText;
+      myFunction(dropdownId);
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+    window.onload = function () {
+      var dropbtn = document.querySelector('.dropbtn');
+      var dropdownContent = document.querySelector('.dropdown-content');
+
+      if (dropbtn && dropdownContent) {
+        var btnWidth = dropbtn.offsetWidth;
+        dropdownContent.style.width = btnWidth + 'px';
+      }
+    };
+  </script>
+</body>
+
+</html>
